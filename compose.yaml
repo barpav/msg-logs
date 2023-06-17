@@ -31,6 +31,10 @@ services:
       - 8080
     labels:
       co.elastic.logs/enabled: true
+      co.elastic.logs/json.keys_under_root: true
+      co.elastic.logs/json.overwrite_keys: true
+      co.elastic.logs/json.add_error_key: true
+      co.elastic.logs/json.expand_keys: true
     logging: *default-logging
     depends_on:
       storage-users-v1:
