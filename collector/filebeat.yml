@@ -1,0 +1,19 @@
+filebeat.config:
+  modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
+
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      hints.enabled: true
+      hints.default_config.enabled: false
+
+processors:
+  - timestamp:
+      field: timestamp
+      layouts:
+        - '2006-01-02T15:04:05-07:00'
+
+output.elasticsearch:
+  hosts: '${ELASTICSEARCH_HOSTS}'
