@@ -11,3 +11,7 @@ This is logging component of the [Messenger](https://github.com/barpav/messenger
 * Logs visualization (Kibana).
 
 See [deployment diagram](https://github.com/barpav/messenger#deployment-diagram) for details.
+
+## Example
+
+![Logs in Kibana](./docs/logs_example.png)
